@@ -1,3 +1,11 @@
+$font-title: 120px;
+$gap: 20px;
+$gap2: $gap * 2;
+$fz: 1rem;
+$fw700: 700;
+$fw900: 900;
+$lh: 1.2;
+
 .wrap {
   background-color: black;
   color: white;
@@ -15,10 +23,6 @@
   align-items: center;
   height: $gap2 * 2;
   border-bottom: 1px solid #fff;
-  // position: sticky;
-  // background-color: rgba(0, 0, 0, 0.5);
-  // top: 0;
-  // z-index: 100;
 
   .logo {
     img {

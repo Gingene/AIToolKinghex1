@@ -720,14 +720,6 @@ a {
   margin-left: 0.75rem;
 }
 
-.owl-theme .owl-dots .owl-dot.active span {
-  background-color: #fff;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  background-color: #525252;
-}
-
 @media (max-width: 1440px) {
   .home .banner-title {
     margin-left: 0;
@@ -854,6 +846,9 @@ a {
     margin: 40px 0;
     order: 3;
   }
+  .footer .social-link:first-child {
+    margin: 0;
+  }
   .footer .backToTop {
     order: 2;
   }
@@ -959,6 +954,7 @@ a {
   .application-title {
     font-size: 2rem;
     margin-bottom: 32px;
+    padding: 0 2rem;
   }
   .application-filter {
     margin-bottom: 48px;
@@ -978,7 +974,7 @@ a {
     padding-top: 120px;
   }
   .building-start-title {
-    padding: 0 70px;
+    padding: 0 60px;
     text-align: center;
   }
   .footerNav {
@@ -990,4 +986,11 @@ a {
   .footer {
     margin-top: 40px;
   }
+}
+.owl-theme .owl-dots .owl-dot.active span {
+  background-color: #fff;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background-color: #525252;
 }/*# sourceMappingURL=all.css.map */

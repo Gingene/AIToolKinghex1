@@ -42,21 +42,6 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
-// $(document).ready(function () {
-//   $(menuToggle).on("click", function () {
-//     $(this).toggleClass("activeicon");
-//     $(menuClose).toggleClass("activeicon");
-//     $(".mobile-menu").toggleClass("mobile-menu-show");
-//     $(".mobile-menu").animate({ height: "100px" }, 1000);
-//   });
-//   $(menuClose).on("click", function () {
-//     $(this).toggleClass("activeicon");
-//     $(menuToggle).toggleClass("activeicon");
-//     $(".mobile-menu").toggleClass("mobile-menu-show");
-//     $(".mobile-menu").animate({ height: "100px" }, 1000);
-//   });
-// });
-
 menuToggle.addEventListener("click", (e) => {
   e.target.classList.toggle("activeicon");
   menuClose.classList.toggle("activeicon");
@@ -65,6 +50,7 @@ menuToggle.addEventListener("click", (e) => {
   $("section").hide();
 });
 
+// pageState儲存當前頁面資訊並在關閉導覽按鈕時重新渲染當前頁面
 menuClose.addEventListener("click", (e) => {
   console.log(pageState);
   e.target.classList.toggle("activeicon");
@@ -109,7 +95,7 @@ navItem.forEach((item) => {
   });
 });
 
-// 手機
+// 手機導覽列
 mobileItem.forEach((item) => {
   item.addEventListener("click", (e) => {
     console.log(e.target.textContent);
@@ -123,6 +109,7 @@ mobileItem.forEach((item) => {
       pricing.style.display = "block";
       questions.style.animation = "fadeIn 1s ease forwards";
       questions.style.display = "flex";
+      // 回復被手機導覽列關閉的區塊
       $(".application").show();
       $(".footerNav").show();
       pageState = !pageState;
@@ -133,6 +120,7 @@ mobileItem.forEach((item) => {
       home.style.display = "block";
       building.style.animation = "fadeIn 1s ease forwards";
       building.style.display = "block";
+      // 回復被手機導覽列關閉的區塊
       $(".application").show();
       $(".footerNav").show();
       pageState = !pageState;
@@ -190,13 +178,6 @@ pageLink.forEach((item) => {
     e.target.classList.add("page-alink");
   });
 });
-
-// $(document).ready(function () {
-//   $(".questions-content").on("click", ".question-title", function () {
-//     $(this).siblings(".question-content").slideToggle();
-//     $(this).toggleClass("expanded");
-//   });
-// });
 
 questionTitle.forEach((item) => {
   item.addEventListener("click", (e) => {
