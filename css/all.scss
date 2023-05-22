@@ -1,0 +1,355 @@
+@import "reset";
+@import "animation";
+@import "basic";
+@import "main";
+
+// 輪播圓點樣式
+.owl-theme .owl-dots .owl-dot.active span {
+  background-color: #fff;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background-color: #525252;
+}
+
+@media (max-width: 1440px) {
+  .home {
+    .banner {
+      &-title {
+        margin-left: 0; // 次標題回正
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .home {
+    .banner {
+      &-title {
+        font-size: 5rem;
+      }
+    }
+    .service {
+      &-content {
+        flex-direction: column;
+        h2 {
+          margin-bottom: $gap2;
+          width: 100%;
+        }
+        h3 {
+          font-size: 3rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .pricing {
+    &-rule {
+      flex-direction: column;
+      &-title {
+        margin-right: 0;
+        margin-bottom: $gap2;
+      }
+    }
+  }
+  .application {
+    &-title {
+      font-size: 5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    .service {
+      &-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &-item {
+          &:nth-child(2) {
+            margin-right: 0;
+            margin-left: 0;
+          }
+          margin-bottom: $gap2;
+        }
+      }
+    }
+  }
+  .pricing {
+    &-list {
+      &-card {
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 12px;
+      }
+    }
+  }
+  .application {
+    border-radius: 80px;
+    &-filter {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      > :first-child {
+        order: 1;
+      }
+      &-list {
+        order: 3;
+        margin-top: 1rem;
+      }
+      > :last-child {
+        order: 2;
+      }
+    }
+  }
+  .footerNav {
+    flex-direction: column;
+    &-link {
+      order: 2;
+    }
+    &-logo {
+      order: 1;
+      margin-bottom: $gap2;
+    }
+  }
+  .footer {
+    .copyright {
+      margin-right: 0;
+    }
+    .social {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .banner {
+    &-animation {
+      img {
+        width: 33.33%;
+      }
+    }
+  }
+
+  .pricing {
+    &-title {
+      font-size: 100px;
+    }
+    &-content {
+      p {
+        width: 80%;
+      }
+    }
+  }
+
+  .application {
+    &-filter {
+      &-list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &-item {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  .building {
+    &-start {
+      &-title {
+        font-size: $fz * 2;
+      }
+    }
+  }
+  .questions {
+    flex-direction: column;
+    margin-top: $gap * 3;
+    margin-bottom: $gap * 3;
+    &-title {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+    &-content {
+      .question {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+    }
+  }
+  .footer {
+    flex-wrap: wrap;
+    .copyright {
+      order: 1;
+    }
+    .social {
+      margin: $gap2 0;
+      order: 3;
+    }
+    .backToTop {
+      order: 2;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .wrap {
+    padding: 0 12px;
+  }
+  .header {
+    padding: 0;
+    .logo {
+      img {
+        height: 24px;
+      }
+    }
+    .nav {
+      position: relative;
+      .activeicon {
+        display: flex;
+      }
+      .menu {
+        display: none;
+
+        &-item {
+          margin: 20px 0;
+        }
+
+        &-icons {
+          width: 40px;
+          height: 40px;
+          font-size: 1.5rem;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  .mobile {
+    &-menu {
+      &-show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 80px;
+        font-weight: $fw900;
+        line-height: $lh;
+        margin: 150px 0;
+      }
+    }
+  }
+
+  .home {
+    margin-top: $gap2;
+    .banner {
+      &-title {
+        font-size: 3rem;
+      }
+      &-animation {
+        margin-bottom: $gap2 * 3;
+      }
+    }
+    .service {
+      &-content {
+        margin-bottom: 48px;
+        h2 {
+          font-size: 20px;
+          margin-bottom: 24px;
+        }
+        h3 {
+          font-size: 32px;
+        }
+      }
+      &-list {
+        &-item {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+  .pricing {
+    &-title {
+      font-size: 3rem;
+    }
+    &-content {
+      font-size: 28px;
+    }
+    &-model {
+      &-title {
+        font-size: 20px;
+        margin-bottom: 24px;
+      }
+    }
+    &-list {
+      margin-bottom: $gap * 3;
+      &-card {
+        margin: 0 0 12px 0;
+        &-info {
+          padding: 20px 20px 8px 20px;
+        }
+      }
+    }
+    &-rule {
+      &-title {
+        font-size: 20px;
+        margin-bottom: 48px;
+      }
+      &-content {
+        border-bottom: 1px solid #525252;
+        &-info {
+          h4 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 1rem;
+            margin-bottom: $gap2;
+          }
+        }
+      }
+    }
+  }
+  .application {
+    margin: 0 -12px;
+    border-radius: 20px;
+    &-title {
+      font-size: $fz * 2;
+      margin-bottom: 32px;
+    }
+    &-filter {
+      margin-bottom: 48px;
+    }
+    &-main {
+      .app {
+        margin: 0;
+        margin-bottom: 12px;
+      }
+      &-pages {
+        margin-top: 32px;
+        padding-bottom: 80px;
+      }
+    }
+  }
+  .building {
+    margin-top: $gap2;
+    &-start {
+      padding-top: $gap2 * 3;
+      &-title {
+        padding: 0 70px;
+        text-align: center;
+      }
+    }
+  }
+
+  .footerNav {
+    padding: 80px 0;
+    &-link {
+      a {
+        font-size: 3rem;
+      }
+    }
+  }
+  .footer {
+    margin-top: $gap2;
+  }
+}
