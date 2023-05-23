@@ -100,6 +100,7 @@ $lh: 1.2;
     }
     &-list {
       display: flex;
+      gap: 24px;
       &-item {
         display: flex;
         flex-direction: column;
@@ -108,10 +109,10 @@ $lh: 1.2;
         border: 1px solid #525252;
         border-radius: 16px;
         max-width: 416px;
-        &:nth-child(2) {
-          margin-right: 24px;
-          margin-left: 24px;
-        }
+        // &:nth-child(2) {
+        //   margin-right: 24px;
+        //   margin-left: 24px;
+        // }
         h4 {
           padding: $gap 0;
           font-size: $fz * 2;
@@ -229,13 +230,13 @@ $lh: 1.2;
   &-list {
     display: flex;
     flex-wrap: wrap;
+    gap: 24px;
     margin-bottom: $gap2 * 4;
     &-card {
       width: 43%;
       padding: $gap 32px;
       border: 1px solid rgb(52, 52, 52);
       border-radius: 16px;
-      margin: 0 24px 24px 0;
       &-name {
         font-size: $fz * 2;
         margin-bottom: 12px;
@@ -268,14 +269,18 @@ $lh: 1.2;
       margin-right: 312px;
     }
     &-content {
-      h4 {
-        font-size: $fz * 3;
-        font-weight: $fw900;
-        margin-bottom: 1.5rem;
-      }
-      p {
-        font-size: $fz * 2;
-        margin-bottom: $gap2 * 2;
+      &-info {
+        border-bottom: 1px solid #525252;
+        margin-bottom: $gap2;
+        h4 {
+          font-size: $fz * 3;
+          font-weight: $fw900;
+          margin-bottom: 1.5rem;
+        }
+        p {
+          font-size: $fz * 2;
+          margin-bottom: $gap2;
+        }
       }
     }
   }
@@ -293,11 +298,11 @@ $lh: 1.2;
     text-align: center;
   }
   &-search {
+    margin-bottom: 24px;
     &-form {
       position: relative;
       display: flex;
       align-items: center;
-      margin-bottom: 24px;
       > span {
         display: inline-block;
         position: absolute;
@@ -361,29 +366,27 @@ $lh: 1.2;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      gap: 24px;
       .app {
-        margin: 0 0.5rem 1.5rem;
         max-width: 416px;
         border-radius: 16px;
         display: flex;
         flex-direction: column;
-        overflow: hidden;
         &:hover img {
           transform: scale(1.1);
         }
         &-pic {
+          overflow: hidden;
           img {
             display: block;
             width: 100%;
             transition: all 0.3s ease;
             cursor: pointer;
-            overflow: hidden;
           }
         }
         &-intro {
           padding: 20px 32px;
           flex-grow: 1;
-          // margin-bottom: auto;
         }
         &-title {
           font-size: 20px;
@@ -409,6 +412,7 @@ $lh: 1.2;
           padding: 20px 32px;
           display: flex;
           justify-content: space-between;
+          align-items: center;
           border: 1px solid #f2f2f2;
           font-size: 1rem;
           a {

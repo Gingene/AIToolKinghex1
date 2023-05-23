@@ -283,6 +283,7 @@ a {
 }
 .home .service-list {
   display: flex;
+  gap: 24px;
 }
 .home .service-list-item {
   display: flex;
@@ -292,10 +293,6 @@ a {
   border: 1px solid #525252;
   border-radius: 16px;
   max-width: 416px;
-}
-.home .service-list-item:nth-child(2) {
-  margin-right: 24px;
-  margin-left: 24px;
 }
 .home .service-list-item h4 {
   padding: 20px 0;
@@ -397,6 +394,7 @@ a {
 .pricing-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 24px;
   margin-bottom: 160px;
 }
 .pricing-list-card {
@@ -404,7 +402,6 @@ a {
   padding: 20px 32px;
   border: 1px solid rgb(52, 52, 52);
   border-radius: 16px;
-  margin: 0 24px 24px 0;
 }
 .pricing-list-card-name {
   font-size: 2rem;
@@ -436,14 +433,18 @@ a {
   font-weight: 900;
   margin-right: 312px;
 }
-.pricing-rule-content h4 {
+.pricing-rule-content-info {
+  border-bottom: 1px solid #525252;
+  margin-bottom: 40px;
+}
+.pricing-rule-content-info h4 {
   font-size: 3rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
 }
-.pricing-rule-content p {
+.pricing-rule-content-info p {
   font-size: 2rem;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .application {
@@ -458,11 +459,13 @@ a {
   margin-bottom: 80px;
   text-align: center;
 }
+.application-search {
+  margin-bottom: 24px;
+}
 .application-search-form {
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
 }
 .application-search-form > span {
   display: inline-block;
@@ -525,24 +528,25 @@ a {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 24px;
 }
 .application-main .apps .app {
-  margin: 0 0.5rem 1.5rem;
   max-width: 416px;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 .application-main .apps .app:hover img {
   transform: scale(1.1);
+}
+.application-main .apps .app-pic {
+  overflow: hidden;
 }
 .application-main .apps .app-pic img {
   display: block;
   width: 100%;
   transition: all 0.3s ease;
   cursor: pointer;
-  overflow: hidden;
 }
 .application-main .apps .app-intro {
   padding: 20px 32px;
@@ -571,6 +575,7 @@ a {
   padding: 20px 32px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: 1px solid #f2f2f2;
   font-size: 1rem;
 }
@@ -757,17 +762,9 @@ a {
     justify-content: center;
     align-items: center;
   }
-  .home .service-list-item {
-    margin-bottom: 40px;
-  }
-  .home .service-list-item:nth-child(2) {
-    margin-right: 0;
-    margin-left: 0;
-  }
   .pricing-list-card {
     width: 100%;
     flex-wrap: wrap;
-    margin: 12px;
   }
   .application {
     border-radius: 80px;
@@ -781,7 +778,10 @@ a {
   }
   .application-filter-list {
     order: 3;
-    margin-top: 1rem;
+  }
+  .application-filter-list-item {
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
   .application-filter > :last-child {
     order: 2;
@@ -814,11 +814,8 @@ a {
     width: 80%;
   }
   .application-filter-list {
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .application-filter-list-item {
-    margin-bottom: 16px;
+    white-space: nowrap;
+    overflow-x: scroll;
   }
   .building-start-title {
     font-size: 2rem;
@@ -911,8 +908,8 @@ a {
   .home .service-content h3 {
     font-size: 32px;
   }
-  .home .service-list-item {
-    margin-bottom: 12px;
+  .home .service-list {
+    gap: 12px;
   }
   .pricing-title {
     font-size: 3rem;
@@ -925,10 +922,8 @@ a {
     margin-bottom: 24px;
   }
   .pricing-list {
+    gap: 12px;
     margin-bottom: 60px;
-  }
-  .pricing-list-card {
-    margin: 0 0 12px 0;
   }
   .pricing-list-card-info {
     padding: 20px 20px 8px 20px;
@@ -937,8 +932,8 @@ a {
     font-size: 20px;
     margin-bottom: 48px;
   }
-  .pricing-rule-content {
-    border-bottom: 1px solid #525252;
+  .pricing-rule-content-info {
+    margin-bottom: 24px;
   }
   .pricing-rule-content-info h4 {
     font-size: 2rem;
@@ -956,12 +951,24 @@ a {
     margin-bottom: 32px;
     padding: 0 2rem;
   }
+  .application-search {
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 16px;
+  }
   .application-filter {
     margin-bottom: 48px;
+    justify-content: space-between;
+  }
+  .application-filter > :nth-child(odd) {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .application-main .apps {
+    gap: 12px;
   }
   .application-main .app {
-    margin: 0;
-    margin-bottom: 12px;
+    margin: 0 12px;
   }
   .application-main-pages {
     margin-top: 32px;

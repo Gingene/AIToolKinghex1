@@ -52,13 +52,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        &-item {
-          &:nth-child(2) {
-            margin-right: 0;
-            margin-left: 0;
-          }
-          margin-bottom: $gap2;
-        }
       }
     }
   }
@@ -67,7 +60,6 @@
       &-card {
         width: 100%;
         flex-wrap: wrap;
-        margin: 12px;
       }
     }
   }
@@ -81,7 +73,10 @@
       }
       &-list {
         order: 3;
-        margin-top: 1rem;
+        &-item {
+          margin-top: 16px;
+          margin-bottom: 16px;
+        }
       }
       > :last-child {
         order: 2;
@@ -131,11 +126,8 @@
   .application {
     &-filter {
       &-list {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        &-item {
-          margin-bottom: 16px;
-        }
+        white-space: nowrap;
+        overflow-x: scroll;
       }
     }
   }
@@ -253,9 +245,7 @@
         }
       }
       &-list {
-        &-item {
-          margin-bottom: 12px;
-        }
+        gap: 12px;
       }
     }
   }
@@ -273,9 +263,9 @@
       }
     }
     &-list {
+      gap: 12px;
       margin-bottom: $gap * 3;
       &-card {
-        margin: 0 0 12px 0;
         &-info {
           padding: 20px 20px 8px 20px;
         }
@@ -287,8 +277,8 @@
         margin-bottom: 48px;
       }
       &-content {
-        border-bottom: 1px solid #525252;
         &-info {
+          margin-bottom: 24px;
           h4 {
             font-size: 2rem;
           }
@@ -308,13 +298,25 @@
       margin-bottom: 32px;
       padding: 0 2rem;
     }
+    &-search {
+      margin-left: 12px;
+      margin-right: 12px;
+      margin-bottom: 16px;
+    }
     &-filter {
       margin-bottom: 48px;
+      justify-content: space-between;
+      > :nth-child(odd) {
+        margin-left: 12px;
+        margin-right: 12px;
+      }
     }
     &-main {
+      .apps {
+        gap: 12px;
+      }
       .app {
-        margin: 0;
-        margin-bottom: 12px;
+        margin: 0 12px;
       }
       &-pages {
         margin-top: 32px;
