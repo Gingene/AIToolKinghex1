@@ -532,7 +532,6 @@ a {
 }
 .application-main .apps .app {
   max-width: 416px;
-  border-radius: 16px;
   display: flex;
   flex-direction: column;
 }
@@ -540,6 +539,7 @@ a {
   transform: scale(1.1);
 }
 .application-main .apps .app-pic {
+  border-radius: 16px 16px 0 0;
   overflow: hidden;
 }
 .application-main .apps .app-pic img {
@@ -551,6 +551,7 @@ a {
 .application-main .apps .app-intro {
   padding: 20px 32px;
   flex-grow: 1;
+  border: 1px solid #f2f2f2;
 }
 .application-main .apps .app-title {
   font-size: 20px;
@@ -578,6 +579,7 @@ a {
   align-items: center;
   border: 1px solid #f2f2f2;
   font-size: 1rem;
+  border-radius: 0 0 16px 16px;
 }
 .application-main .apps .app-tag a {
   text-decoration: none;

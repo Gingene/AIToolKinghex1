@@ -369,13 +369,13 @@ $lh: 1.2;
       gap: 24px;
       .app {
         max-width: 416px;
-        border-radius: 16px;
         display: flex;
         flex-direction: column;
         &:hover img {
           transform: scale(1.1);
         }
         &-pic {
+          border-radius: 16px 16px 0 0;
           overflow: hidden;
           img {
             display: block;
@@ -387,6 +387,7 @@ $lh: 1.2;
         &-intro {
           padding: 20px 32px;
           flex-grow: 1;
+          border: 1px solid #f2f2f2;
         }
         &-title {
           font-size: 20px;
@@ -415,6 +416,7 @@ $lh: 1.2;
           align-items: center;
           border: 1px solid #f2f2f2;
           font-size: 1rem;
+          border-radius: 0 0 16px 16px;
           a {
             text-decoration: none;
             color: #000;
