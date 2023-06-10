@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -382,40 +382,72 @@
             </form>
           </div>
           <div class="application-filter">
-            <button class="btn">
+            <button class="btn" id="filterbtn">
               篩選
               <span class="material-icons">filter_alt</span>
             </button>
+            <div class="application-filter-selection">
+              <div class="application-filter-selection-model">
+                <h3>模型</h3>
+                <p>
+                  <span>所有模型</span><span class="material-icons">done</span>
+                </p>
+                <p><span>卡卡</span><span class="material-icons">done</span></p>
+                <p><span>杰杰</span><span class="material-icons">done</span></p>
+                <p><span>琪琪</span><span class="material-icons">done</span></p>
+                <p><span>昊昊</span><span class="material-icons">done</span></p>
+              </div>
+              <div class="application-filter-selection-type">
+                <h3>類型</h3>
+                <p>
+                  <span>所有類型</span><span class="material-icons">done</span>
+                </p>
+                <p>
+                  <span>篩選項目1</span><span class="material-icons">done</span>
+                </p>
+                <p>
+                  <span>篩選項目2</span><span class="material-icons">done</span>
+                </p>
+                <p>
+                  <span>篩選項目3</span><span class="material-icons">done</span>
+                </p>
+                <p>
+                  <span>篩選項目4</span><span class="material-icons">done</span>
+                </p>
+                <p>
+                  <span>篩選項目5</span><span class="material-icons">done</span>
+                </p>
+                <p>
+                  <span>篩選項目6</span><span class="material-icons">done</span>
+                </p>
+              </div>
+            </div>
             <ul class="application-filter-list">
               <li class="application-filter-list-item">
                 <a href="#" class="filter-active">全部</a>
               </li>
               <li class="application-filter-list-item">
-                <a href="#">聊天</a>
+                <a href="#">問答服務</a>
               </li>
               <li class="application-filter-list-item">
-                <a href="#">影像辨識</a>
+                <a href="#">虛擬客服</a>
               </li>
               <li class="application-filter-list-item">
-                <a href="#">翻譯</a>
+                <a href="#">生活應用</a>
               </li>
               <li class="application-filter-list-item">
-                <a href="#">行銷</a>
+                <a href="#">程式知識</a>
               </li>
               <li class="application-filter-list-item">
-                <a href="#">客服</a>
+                <a href="#">翻譯助手</a>
               </li>
               <li class="application-filter-list-item">
-                <a href="#">生產力</a>
+                <a href="#">行銷文案</a>
               </li>
             </ul>
-            <select
-              name="filterlist"
-              id="filterlist"
-              class="btn material-icons"
-            >
-              <option value="由新到舊">由新到舊 expand_more</option>
-              <option value="由新到舊">由舊到新 expand_more</option>
+            <select id="sortbtn" class="btn material-icons">
+              <option value="0">由新到舊 expand_more</option>
+              <option value="1">由舊到新 expand_more</option>
             </select>
           </div>
           <div class="application-main">
@@ -566,12 +598,20 @@
             </ul>
             <ul class="application-main-pages">
               <li class="page">
-                <a href="" class="page-link page-alink">1</a>
+                <a href="" class="page-link page-alink" data-page="1">1</a>
               </li>
-              <li class="page"><a href="" class="page-link">2</a></li>
-              <li class="page"><a href="" class="page-link">3</a></li>
-              <li class="page"><a href="" class="page-link">4</a></li>
-              <li class="page"><a href="" class="page-link">5</a></li>
+              <li class="page">
+                <a href="" class="page-link" data-page="2">2</a>
+              </li>
+              <li class="page">
+                <a href="" class="page-link" data-page="3">3</a>
+              </li>
+              <li class="page">
+                <a href="" class="page-link" data-page="4">4</a>
+              </li>
+              <li class="page">
+                <a href="" class="page-link" data-page="5">5</a>
+              </li>
               <li class="page">
                 <a href="" class="page-link"
                   ><span class="material-icons"> navigate_next </span></a
@@ -668,5 +708,11 @@
   </body>
   <script src="js/jquery-3.7.0.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+    integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
   <script src="js/app.js"></script>
 </html>

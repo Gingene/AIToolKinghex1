@@ -1,0 +1,19 @@
+$font-title: 120px;
+$gap: 20px;
+$gap2: $gap * 2;
+$fz: 1rem;
+$fw700: 700;
+$fw900: 900;
+$lh: 1.2;
+
+.wrap {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 12px;
+  margin: 0 auto;
+  font-family: "Noto Sans TC", sans-serif;
+}

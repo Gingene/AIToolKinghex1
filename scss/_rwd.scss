@@ -128,6 +128,7 @@
       &-list {
         white-space: nowrap;
         overflow-x: scroll;
+        justify-content: initial;
       }
     }
   }
@@ -309,6 +310,9 @@
       > :nth-child(odd) {
         margin-left: 12px;
         margin-right: 12px;
+      }
+      &-selection {
+        top: 50%;
       }
     }
     &-main {
